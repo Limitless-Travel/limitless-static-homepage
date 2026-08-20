@@ -27,6 +27,6 @@ Only read [WEB_COMPONENTS.md](./WEB_COMPONENTS.md) if you need to change or crea
 
 ## Finish
 
-Before selecting **Finish coding** in the assessment form, please test `index.html` on desktop and mobile layouts.
+Before submitting the assessment form again (this time choosing the option **Task completed**), please test `index.html` on desktop and mobile layouts.
 
-After selecting **Finish coding** and uploading the project, do not change the code any further. You can take any screenshots or other evidence afterwards.
+After selecting **Task completed** and uploading the project, do not change the code any further. You can take any screenshots or other evidence afterwards.
