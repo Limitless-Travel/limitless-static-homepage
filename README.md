@@ -5,7 +5,7 @@ Your 60-minute coding window is running. Implement at least one meaningful impro
 ## Get started
 
 1. Clone this repository.
-2. Open `index.html` directly in Chrome.
+2. Open `index.html` directly in your web browser.
 
 There is nothing to install or run. Your finished project must continue to open without dependencies, a server, or a build step. Links, buttons, and forms are intentionally inactive.
 
@@ -20,7 +20,7 @@ index.html            Page structure and reusable HTML templates
 styles/               Shared, responsive, and component CSS
 data/                 Content used by repeated components
 components.js         Data binding and Web Component registration
-public/fonts/         Local brand fonts
+fonts/                Local brand fonts
 ```
 
 Only read [WEB_COMPONENTS.md](./WEB_COMPONENTS.md) if you need to change or create a repeated component.
