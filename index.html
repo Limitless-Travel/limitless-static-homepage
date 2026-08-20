@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="A static recreation of the Limitless Travel homepage for a frontend candidate assessment." name="description"/>
+  <title>
+   Disabled Holidays | Wheelchair Accessible Holidays
+  </title>
+  <link href="./styles/base.css" rel="stylesheet"/>
+  <link href="./styles/components.css" rel="stylesheet"/>
+  <link href="./styles/responsive.css" rel="stylesheet"/>
+  <link href="./styles/components/holiday-row.css" rel="stylesheet"/>
+  <link href="./styles/components/holiday-card.css" rel="stylesheet"/>
+  <link href="./styles/components/category-section.css" rel="stylesheet"/>
+  <link href="./styles/components/category-card.css" rel="stylesheet"/>
+  <link href="./styles/components/trust-item.css" rel="stylesheet"/>
+  <link href="./styles/components/search-field.css" rel="stylesheet"/>
+  <link href="./styles/components/enquiry-field.css" rel="stylesheet"/>
+  <link href="./styles/components/split-section.css" rel="stylesheet"/>
+  <link href="./styles/components/footer-link-group.css" rel="stylesheet"/>
+  <script defer="" src="./data/holiday-rows.js">
+  </script>
+  <script defer="" src="./data/category-sections.js">
+  </script>
+  <script defer="" src="./data/trust-items.js">
+  </script>
+  <script defer="" src="./data/search-fields.js">
+  </script>
+  <script defer="" src="./data/enquiry-fields.js">
+  </script>
+  <script defer="" src="./data/split-sections.js">
+  </script>
+  <script defer="" src="./data/footer-link-groups.js">
+  </script>
+  <script defer="" src="./components.js">
+  </script>
+ </head>
+ <body>
+  <header class="site-header" id="top">
+   <div class="site-header__inner page-width">
+    <a aria-label="Homepage" class="site-header__logo-link" title="Limitless Travel">
+     <svg class="limitless-logo limitless-logo__circle" height="64" viewbox="0 0 292.77 292.78" xmlns="http://www.w3.org/2000/svg">
+      <path d="M171.73,98.1c5.86-17,12.42-27.66,23.42-26.62,7.23.68,13.07,5.07,15.26,11.44,2.07,6,.76,12.88-3.25,17.1s-11.62,6.27-18.27,4.78c-4.25-1-8.52-2.86-13-4.89-1.34-.6-2.72-1.21-4.12-1.81m-4.54,15.17c.74.32,1.48.66,2.24,1,5,2.25,10.23,4.57,16,5.87,12.14,2.72,25.12-.92,33.08-9.28s10.73-21.45,6.74-33c-4.22-12.29-15.2-20.71-28.65-22-23.77-2.26-34.28,20.91-39.71,36.89a157.35,157.35,0,0,0-24-5.3c-20.43-2.88-39.24-2.75-55.93.39C58.55,91.28,39.51,98.32,21.4,108.3c16.35-53.53,66.18-92.58,125-92.58,72.05,0,130.66,58.62,130.66,130.67a131.17,131.17,0,0,1-3.37,29.51c-14.67,6.9-26.31,11.92-32.05,13.8a146.29,146.29,0,0,1-50.46,7.66,181.84,181.84,0,0,1-43.1-6.47ZM128.88,201a55.2,55.2,0,0,1-5.56,14c-3.71,6.34-10.8,13.11-16.64,13.18a19.79,19.79,0,0,1-11-3,17.45,17.45,0,0,1-7.52-16.2,15.64,15.64,0,0,1,11.12-13.67,21.33,21.33,0,0,1,6.5-1,34.43,34.43,0,0,1,11.67,2.37c2.46.89,4.92,1.82,7.36,2.74l4.07,1.53M133,185.8l-2.65-1c-2.53-1-5-1.91-7.6-2.83-10.54-3.8-19.5-4.32-28.18-1.6A31.53,31.53,0,0,0,72.5,207.6a33.33,33.33,0,0,0,14.61,30.83,35.82,35.82,0,0,0,19.35,5.51h.39c13.21-.14,24.44-11.38,30-21a68.85,68.85,0,0,0,6.92-17l.06,0a197.07,197.07,0,0,0,46.84,7,164,164,0,0,0,55.82-8.43c5.2-1.71,13.15-5.09,20.73-8.48A130.92,130.92,0,0,1,148.63,277l-1.73,0c-72-.08-131.18-58.66-131.18-130.66a129.8,129.8,0,0,1,1.27-18,7.86,7.86,0,0,0,3-1.09c19.3-12,40-20.33,60-24.08,15-2.82,32.1-2.91,50.83-.27a141.58,141.58,0,0,1,21.6,4.78ZM146.39,0C65.67,0,0,65.67,0,146.39c0,80.53,65.37,146.07,145.84,146.37v0h.55c.81,0,1.86,0,2.5,0A146.38,146.38,0,0,0,292.77,146.39C292.77,65.67,227.11,0,146.39,0" data-stroke-id="circle">
+      </path>
+     </svg>
+     <svg class="limitless-logo limitless-logo__text" height="64" viewbox="0 0 830 230.24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M34.29,133.61a4.2,4.2,0,0,1-2.61,1c-2.94,0-3.76-2.78-3.76-7.18V53.93c0-11.27-5.88-17.8-17-17.8-4.57,0-8,1.14-10.29,2.77L0,40,2.61,52.13l1.15.49a4.2,4.2,0,0,1,2.61-1c3.1,0,3.75,2.77,3.75,7.18v72.5c0,11.27,5.88,18.78,17.15,18.78a17.37,17.37,0,0,0,10.12-2.77l.66-1.15L35.43,134.1Z" data-stroke-id="limitless1" transform="translate(0 -32.53)">
+      </path>
+      <path d="M101.07,133.61a3.39,3.39,0,0,1-2.44,1c-3.11,0-3.76-2.78-3.76-7.18V66.5H77.07v64.82c0,11.27,5.88,18.78,17.15,18.78a17.39,17.39,0,0,0,10.12-2.77l.65-1.15-2.61-12.08Z" data-stroke-id="limitless2a" transform="translate(0 -32.53)">
+      </path>
+      <path d="M85.89,57.19A12.33,12.33,0,1,0,73.64,44.78,12.41,12.41,0,0,0,85.89,57.19" data-stroke-id="limitless2a" transform="translate(0 -32.53)">
+      </path>
+      <path d="M284.45,133.61a4.23,4.23,0,0,1-2.62,1c-2.93,0-3.75-2.78-3.75-7.18V99c0-20.41-12.57-34.45-32.82-34.45-12.74,0-23,5.55-29.4,13.88-5.55-8.66-15-13.88-27.43-13.88a37.27,37.27,0,0,0-26.29,10.29c-2-6.54-7.34-10.29-14.86-10.29a17.24,17.24,0,0,0-10,2.77l-.65,1.15,2.61,12.08,1.15.49a4.2,4.2,0,0,1,2.61-1c3.1,0,3.76,2.78,3.76,7.19v60.9h18V100.46c0-12.41,8.32-20.57,20.08-20.57s18.78,8.16,18.78,20.57v47.68h17.8V100.46c0-12.41,8.33-20.57,20.24-20.57,11.76,0,18.62,8.16,18.62,20.57v31.35c0,11.11,5.72,18.29,17,18.29,4.57,0,8-1.14,10.29-2.77l.65-1.15-2.61-12.08Z" data-stroke-id="limitless3" transform="translate(0 -32.53)">
+      </path>
+      <path d="M335.07,57.19a12.33,12.33,0,1,0-12.25-12.41,12.41,12.41,0,0,0,12.25,12.41" data-stroke-id="limitless4a" transform="translate(0 -32.53)">
+      </path>
+      <path d="M350.25,133.61a3.39,3.39,0,0,1-2.44,1c-3.11,0-3.76-2.78-3.76-7.18V66.5h-17.8v64.82c0,11.27,5.88,18.78,17.14,18.78a17.41,17.41,0,0,0,10.13-2.77l.65-1.15-2.61-12.08Z" data-stroke-id="limitless4b" transform="translate(0 -32.53)">
+      </path>
+      <path d="M442.7,69.7c-7.68,1.93-16.1,2-26.32.17v-32l-1.3-.82-16.49,2.45V67.34a73.37,73.37,0,0,0-15,.6l-1.51.25c-1.62.27-3.21.65-4.79,1-.07.09-.82,1-1.39,1.68V83.2l1.18.74a62.67,62.67,0,0,1,7.36-1.79l1.24-.2a60.8,60.8,0,0,1,12.89-.41v39.33c0,18.45,11.92,29.23,27.59,29.23a26.19,26.19,0,0,0,15.19-4.41l.49-1.3-5.23-11.27-1.14-.65a11.9,11.9,0,0,1-6.86,2.28c-7.83,0-12.25-5.55-12.25-15.18V84.22a77.44,77.44,0,0,0,26.31-.07c.47-.55,1.32-1.59,1.62-2V70.68c-.55-.35-1.22-.76-1.61-1" data-stroke-id="limitless5" transform="translate(0 -32.53)">
+      </path>
+      <path d="M507.17,133.61a4.18,4.18,0,0,1-2.61,1c-2.94,0-3.75-2.78-3.75-7.18V53.93c0-11.27-5.88-17.8-17-17.8-4.57,0-8,1.14-10.28,2.77L472.88,40l2.62,12.09,1.14.49a4.2,4.2,0,0,1,2.61-1c3.1,0,3.76,2.77,3.76,7.18v72.5c0,11.27,5.88,18.78,17.14,18.78a17.43,17.43,0,0,0,10.13-2.77l.65-1.15-2.61-12.08Z" data-stroke-id="limitless6" transform="translate(0 -32.53)">
+      </path>
+      <path d="M563.3,97.88c2.57-12.35,12.22-19.46,24.86-19.46,12.31,0,21.56,6.81,24,19.74-18.39,5-31.9,4.79-48.82-.28m66.25,9.82a29.33,29.33,0,0,0,.23-7.08,39.92,39.92,0,0,0-15.64-27.9c-7.51-5.61-16.83-8.18-26.14-8.18-25.31,0-42.78,18.29-42.78,43.11,0,27.43,21.39,42.45,45.07,42.45,13.06,0,28.25-4.57,36.9-15.51v-1.31L617.88,125h-1.14c-6,7.18-16.49,10.94-26.13,10.94-13.07,0-25.08-7.43-27.45-21.7a94.46,94.46,0,0,0,24.51,3.41c12.14,0,25.34-2.86,40.85-8.12l.91-1Z" data-stroke-id="limitless7" transform="translate(0 -32.53)">
+      </path>
+      <path d="M699.53,98.34c-9-3.59-14-6-14-11.59,0-5.07,4.24-8.82,12.24-8.82a25.41,25.41,0,0,1,19.11,8.65h1.31l9.14-7.83V77.44c-5.88-7.84-17-12.9-29.88-12.9-18,0-29.72,9.63-29.72,23.35,0,14.7,13.39,19.76,26,24.33,10,3.76,18.29,6.53,18.29,14,0,6.21-6,10.45-14.86,10.45a28.28,28.28,0,0,1-22.37-11.1H673.4l-9.14,8v1.31c7.35,9.14,19.59,15.18,34.13,15.18,17.63,0,31.68-8.82,31.68-24.33,0-17.47-18-22.7-30.54-27.43" data-stroke-id="limitless8" transform="translate(0 -32.53)">
+      </path>
+      <path d="M799.46,98.34c-9-3.59-14-6-14-11.59,0-5.07,4.25-8.82,12.25-8.82a25.41,25.41,0,0,1,19.1,8.65h1.31l9.15-7.83V77.44c-5.88-7.84-17-12.9-29.89-12.9-18,0-29.72,9.63-29.72,23.35,0,14.7,13.39,19.76,26,24.33,10,3.76,18.28,6.53,18.28,14,0,6.21-6,10.45-14.86,10.45a28.29,28.29,0,0,1-22.37-11.1h-1.3l-9.15,8v1.31c7.35,9.14,19.6,15.18,34.13,15.18,17.64,0,31.68-8.82,31.68-24.33,0-17.47-18-22.7-30.54-27.43" data-stroke-id="limitless9" transform="translate(0 -32.53)">
+      </path>
+      <path d="M381.31,228c-.25,1.51-.59,3.18-1,5s-1,3.7-1.62,5.65a25.71,25.71,0,0,1-2.44,5.26,13.18,13.18,0,0,1-3.32,3.73,6.12,6.12,0,0,1-4.33,1.16,2.38,2.38,0,0,1-1.88-1.68,10.43,10.43,0,0,1-.71-3.91,29.8,29.8,0,0,1,.4-5.21,32.68,32.68,0,0,1,1.4-5.57,27.9,27.9,0,0,1,2.32-5,11.64,11.64,0,0,1,3.17-3.58,6.4,6.4,0,0,1,4-1.2,7.89,7.89,0,0,1,4.61,2.13c-.11.67-.28,1.75-.53,3.26m53.91-12.27a4.84,4.84,0,0,0-2.3-2,5.13,5.13,0,0,0-3.23-.25,3.84,3.84,0,0,0-2.63,2.31,63,63,0,0,0-3.24,6.76q-1.56,3.76-3,7.6t-2.73,7.53q-1.29,3.68-2.36,6.45c-.16-1.38-.79-4.49-1.91-9.32s-2.66-11.27-4.63-19.34a2.6,2.6,0,0,0-2.19-1.34,5.24,5.24,0,0,0-2.88.63,5.43,5.43,0,0,0-2.18,2.15,3.59,3.59,0,0,0-.1,3.19c.42,2.09.91,4.51,1.48,7.24.48,2.27,1,4.74,1.52,7.34a5.07,5.07,0,0,0-.49,1.21,26,26,0,0,1-1.36,5.06,33,33,0,0,1-2.63,5.53,17.35,17.35,0,0,1-3.59,4.35,5.91,5.91,0,0,1-4.33,1.59,3,3,0,0,1-2.69-2,12.13,12.13,0,0,1-.82-4.52,34.25,34.25,0,0,1,.52-6.14c.37-2.27.82-4.54,1.35-6.79s1.07-4.41,1.63-6.48,1-3.83,1.36-5.26a3.44,3.44,0,0,0-.4-3.26,5.56,5.56,0,0,0-2.5-1.91,5.63,5.63,0,0,0-3-.3,2.39,2.39,0,0,0-2,1.66q-4.53-3.9-8.72-4.18a12.6,12.6,0,0,0-7.7,1.87l-.11.08c-10.6,4.91-16.32,3.9-18.82,2.81l.17-1.25a5.23,5.23,0,0,0-.26-2.48,5.3,5.3,0,0,0-1.15-1.81,4.43,4.43,0,0,0-1.69-1.06,6,6,0,0,0-2-.3,4.39,4.39,0,0,0-3,1.24,5,5,0,0,0-1.35,3.69q-.94,10.2-1.84,16.8c-.47,3.46-.92,6.38-1.36,8.78a13.28,13.28,0,0,1-1.14,2.33,15.13,15.13,0,0,1-3.68,4A12.5,12.5,0,0,1,329,250a14.52,14.52,0,0,1-4.24.53,3.57,3.57,0,0,1-3.23-2,13,13,0,0,1-1.27-5,41.88,41.88,0,0,1,.05-6.79q.3-3.74.84-7.35t1.07-6.69q.54-3.06.69-4.71l13.2-.05a4.14,4.14,0,0,0,2.19-2.09,5.87,5.87,0,0,0,.62-2.95,5.12,5.12,0,0,0-.91-2.67,3.15,3.15,0,0,0-2.33-1.33l-11.55,0,2.23-13.68a3.74,3.74,0,0,0-.95-3.34,4.62,4.62,0,0,0-2.8-1.17,5.79,5.79,0,0,0-3.1.68,3.51,3.51,0,0,0-1.87,2.29L314.89,209a13.43,13.43,0,0,1-3,0,14.17,14.17,0,0,0-3,0,3.48,3.48,0,0,0-2.31,1.7,6.18,6.18,0,0,0-.89,2.91,5.09,5.09,0,0,0,.71,2.87A3.24,3.24,0,0,0,309,218a13.28,13.28,0,0,1,2,0,12.09,12.09,0,0,0,2,0q-.76,4.88-1.42,9.83c-.43,3.26-.72,6.4-.89,9.43-4.16,6.27-8.65,10.55-13.82,13.1-6.87,3.4-14.91,3.65-21.14,3.48-18.49-.49-36.77-5.24-54.44-9.84-8.15-2.12-16.57-4.31-24.94-6.07a208.66,208.66,0,0,0-53-4,229.15,229.15,0,0,0-32.89,4,2.79,2.79,0,0,0,1.08,5.47c28.34-5.58,57.28-5.6,83.66,0,8.25,1.73,16.6,3.91,24.69,6,18,4.68,36.56,9.51,55.69,10,6.87.19,15.79-.11,23.77-4a37.35,37.35,0,0,0,11.49-9,22.36,22.36,0,0,0,1.62,6.66,10.63,10.63,0,0,0,3.79,4.66,11.31,11.31,0,0,0,6.49,1.67,26.94,26.94,0,0,0,9.42-1.57,22.31,22.31,0,0,0,4.42-2.32,6.72,6.72,0,0,0,1.87,1,5.75,5.75,0,0,0,2.79.17,2.68,2.68,0,0,0,2-1.64,7.78,7.78,0,0,0,.63-1.68c.21-.74.52-2.06.94-3.95s1-4.55,1.64-8,1.62-8,2.82-13.79l.09-.73a21.58,21.58,0,0,0,6.12.82,30.49,30.49,0,0,0,4.63-.41c-.43,1-.89,2-1.25,3a39.13,39.13,0,0,0-2.07,9.79,26.94,26.94,0,0,0,.68,9.08,14,14,0,0,0,3.82,6.7,10.26,10.26,0,0,0,7.41,2.58,9.87,9.87,0,0,0,4-.86,19.47,19.47,0,0,0,3.52-2A20.77,20.77,0,0,0,379,253c.81-.85,1.45-1.55,1.9-2.12a13.24,13.24,0,0,0,1.79,4.67,12.27,12.27,0,0,0,2.81,3.14,11.11,11.11,0,0,0,3.3,1.79,10.35,10.35,0,0,0,3.34.56,10.74,10.74,0,0,0,6.74-2.48,27.56,27.56,0,0,0,5.61-6,39.18,39.18,0,0,0,2.93-5.09c.63,3.12,1.28,6.25,2,9.41a2.89,2.89,0,0,0,1.81,1.91,10.11,10.11,0,0,0,3.45.94,8.06,8.06,0,0,0,3.64-.47,3.83,3.83,0,0,0,2.37-2.42c.4-1.39.94-3.11,1.63-5.19s1.44-4.3,2.27-6.68,1.74-4.84,2.7-7.37,1.91-5,2.85-7.33,1.83-4.54,2.7-6.53,1.62-3.66,2.28-5a2.94,2.94,0,0,0,.1-3.06" data-stroke-id="travel1" transform="translate(0 -32.53)">
+      </path>
+      <path d="M471.84,233.33a23.12,23.12,0,0,1,.26-3q.25-1.95.75-4.41c.33-1.64.7-3.4,1.13-5.3s.92-3.76,1.48-5.6,1.06-3.52,1.66-5.18a36.1,36.1,0,0,1,1.87-4.34,13.38,13.38,0,0,1,1.94-2.93,2.47,2.47,0,0,1,1.92-1c.61,0,1,.48,1.11,1.3a9.91,9.91,0,0,1-.14,3.18,37.23,37.23,0,0,1-1.13,4.53c-.53,1.72-1.18,3.52-1.94,5.42-.61,1.58-1.28,3.2-2,4.83s-1.5,3.22-2.29,4.73-1.57,2.93-2.36,4.26-1.54,2.49-2.25,3.46m-28.69-.2c.15-1.17.38-2.42.68-3.72a30.29,30.29,0,0,1,1.14-3.8,14.6,14.6,0,0,1,1.59-3.19,6,6,0,0,1,1.95-1.92,1.93,1.93,0,0,1,2.11.1,3.69,3.69,0,0,1,1.43,2.91,11.12,11.12,0,0,1-.52,4.76,12.43,12.43,0,0,1-2.86,4.76,10,10,0,0,1-5.58,2.94,11.07,11.07,0,0,1,.06-2.84m275.23,5.55c-30.82,4.62-62,3.22-90.15-4-8.8-2.27-17.7-5-26.3-7.69-19.15-5.91-38.94-12-59.52-13.52-7.4-.53-17-.65-25.81,3.21-8,3.51-14.74,9.93-21,20a1.65,1.65,0,0,0-1.16,1,24.15,24.15,0,0,1-3.24,5.27,29.91,29.91,0,0,1-4.54,4.65,17.08,17.08,0,0,1-3.83,2.39,7.73,7.73,0,0,1-3.64.75,4.71,4.71,0,0,1-3-1.37,8,8,0,0,1-1.93-4.1,95.93,95.93,0,0,0,6.86-10,108.68,108.68,0,0,0,5.83-11A85.06,85.06,0,0,0,491,213.4a43.86,43.86,0,0,0,1.88-9.63,16.93,16.93,0,0,0-.87-7.28,5.83,5.83,0,0,0-4.23-3.71A13,13,0,0,0,475,195.9a21.24,21.24,0,0,0-4.31,5.8,45.85,45.85,0,0,0-3.12,7.64,59.51,59.51,0,0,0-1.74,6.84q-.67,3.52-1.12,7.1c-.3,2.37-.51,4.73-.63,7.05S464,234.87,464,237a39,39,0,0,0,.32,5c-.12.25-.21.51-.35.77a26.56,26.56,0,0,1-3.28,4.88,24.61,24.61,0,0,1-4.39,4.08,16.64,16.64,0,0,1-5.13,2.55,6.92,6.92,0,0,1-4.45.21,5.53,5.53,0,0,1-2.8-2.22,10.56,10.56,0,0,1-1.51-3.79,26.42,26.42,0,0,1-.56-4.6,13.67,13.67,0,0,0,7.78-1.6,18.46,18.46,0,0,0,5.77-5,22.68,22.68,0,0,0,3.58-7,29.2,29.2,0,0,0,1.35-7.72,13.86,13.86,0,0,0-1.09-6.09,9.53,9.53,0,0,0-3.12-3.86,9.07,9.07,0,0,0-4.5-1.6,12.12,12.12,0,0,0-5.13.71,12.6,12.6,0,0,0-5.32,3.51,21.77,21.77,0,0,0-3.62,5.62,36,36,0,0,0-2.28,6.87A63.31,63.31,0,0,0,434,235c-.24,2.38-.38,4.65-.39,6.83s0,4,.13,5.55a20.85,20.85,0,0,0,1.91,8.2,12.65,12.65,0,0,0,4.51,5.2,13.23,13.23,0,0,0,6.68,2,21.64,21.64,0,0,0,8.35-1.45,23.1,23.1,0,0,0,5.85-3.09,22,22,0,0,0,4.48-4.5c.54-.73,1.05-1.53,1.56-2.35a18.45,18.45,0,0,0,1.74,2.83,13.1,13.1,0,0,0,5.92,4.35,13.27,13.27,0,0,0,8.13.05,23.1,23.1,0,0,0,9.18-5.17,30.89,30.89,0,0,0,5.31-5.89,37.25,37.25,0,0,0,4.08-7.57c0-.05,0-.09,0-.15,7.48-12.08,10-14.36,17.58-17.68s16.24-3.2,23-2.72c19.89,1.44,39.35,7.46,58.17,13.28,8.67,2.68,17.64,5.45,26.57,7.76a224.86,224.86,0,0,0,56.91,6.89,246.67,246.67,0,0,0,35.64-2.73,3,3,0,0,0-.89-5.94" data-stroke-id="travel2" transform="translate(0 -32.53)">
+      </path>
+     </svg>
+    </a>
+    <a aria-label="ABTA member" class="site-header__abta">
+     <img alt="ABTA Member" src="https://www.limitlesstravel.org/assets/site/images/abta/abta.webp"/>
+    </a>
+    <div aria-label="Opening hours" class="site-header__hours">
+     <div>
+      <strong>
+       Mon-Thu:
+      </strong>
+      <span>
+       9:00am - 6:00pm
+      </span>
+     </div>
+     <div>
+      <strong>
+       Fri:
+      </strong>
+      <span>
+       9:00am - 5:30pm
+      </span>
+     </div>
+     <div>
+      <strong>
+       Sat:
+      </strong>
+      <span>
+       10:00am - 5:30pm
+      </span>
+     </div>
+    </div>
+    <a class="site-header__phone">
+     <span aria-hidden="true">
+      ●
+     </span>
+     0800 711 7112
+    </a>
+   </div>
+   <nav aria-label="Main navigation" class="main-nav">
+    <div class="main-nav__inner page-width">
+     <a>
+      Accessible Cruises
+     </a>
+     <a>
+      Holidays
+     </a>
+     <a>
+      Destinations
+     </a>
+     <a>
+      Deals
+     </a>
+     <a>
+      Care
+     </a>
+     <a class="button button--small">
+      Enquire Now
+     </a>
+    </div>
+   </nav>
+  </header>
+  <main>
+   <a class="promo-banner">
+    NEW: 2027 UK &amp; Overseas Holidays - View Collection
+   </a>
+   <section class="hero">
+    <div class="hero__overlay">
+    </div>
+    <div class="hero__content page-width">
+     <h1>
+      Disabled Holidays and Accessible Cruises
+     </h1>
+     <div class="hero__actions">
+      <a class="button">
+       View Holidays &amp; Cruises
+      </a>
+      <a class="hero__text-link">
+       NEW: 2027 Collection
+      </a>
+     </div>
+    </div>
+   </section>
+   <section aria-label="Holiday search" class="holiday-search-section">
+    <div class="holiday-search page-width">
+     <search-field data-search-field="holiday-type">
+     </search-field>
+     <search-field data-search-field="destination">
+     </search-field>
+     <search-field data-search-field="date">
+     </search-field>
+     <button class="button button--search" type="button">
+      Search
+     </button>
+    </div>
+   </section>
+   <section class="feature-banner">
+    <div class="feature-banner__overlay">
+    </div>
+    <div class="feature-banner__content">
+     <h2>
+      Start 2027 in the Sunshine
+     </h2>
+     <p>
+      Book your Winter Sun escape with just a £100 deposit.
+     </p>
+     <a class="button">
+      Explore Winter Sun
+     </a>
+    </div>
+   </section>
+   <holiday-row data-row="uk-favourites">
+   </holiday-row>
+   <holiday-row data-row="overseas-escapes">
+   </holiday-row>
+   <holiday-row data-row="autumn-cruises">
+   </holiday-row>
+   <category-section data-section="dream-holiday">
+   </category-section>
+   <section class="film-section">
+    <div class="page-width">
+     <h2>
+      What to Expect on a Limitless Holiday? Watch Our Short Film
+     </h2>
+     <a aria-label="Watch Travel With Confidence, the Limitless Travel short film" class="film-section__frame">
+      <img alt="Limitless Travel customers and staff enjoying an accessible holiday" loading="lazy" src="https://img.youtube.com/vi/UaoHY4JRo4U/maxresdefault.jpg"/>
+      <span aria-hidden="true" class="film-section__play">
+       ▶
+      </span>
+      <span class="film-section__caption">
+       Travel With Confidence | Award-Winning Accessible Holidays
+      </span>
+     </a>
+    </div>
+   </section>
+   <section class="trust-section">
+    <div class="page-width">
+     <h2>
+      Why Disabled Travellers Trust Limitless
+     </h2>
+     <div class="trust-grid">
+      <trust-item data-item="reason-1">
+      </trust-item>
+      <trust-item data-item="reason-2">
+      </trust-item>
+      <trust-item data-item="reason-3">
+      </trust-item>
+      <trust-item data-item="reason-4">
+      </trust-item>
+      <trust-item data-item="reason-5">
+      </trust-item>
+      <trust-item data-item="reason-6">
+      </trust-item>
+     </div>
+     <a class="button trust-section__button">
+      Get More Information
+     </a>
+    </div>
+   </section>
+   <category-section data-section="holiday-types">
+   </category-section>
+   <section class="advisor-cta">
+    <div class="advisor-cta__inner page-width">
+     <div>
+      <h2>
+       Lets Discuss Your Perfect Holiday
+      </h2>
+      <p>
+       Get expert, accessible travel advice and personalised recommendations.
+      </p>
+     </div>
+     <a class="button">
+      Speak to a Travel Advisor
+     </a>
+    </div>
+   </section>
+   <split-section data-section="travel-tips">
+   </split-section>
+   <split-section data-section="faqs">
+   </split-section>
+   <section class="enquiry-section" id="Enquire">
+    <div class="enquiry-section__overlay">
+    </div>
+    <div class="enquiry-form">
+     <h2>
+      Get More Information
+     </h2>
+     <p class="enquiry-form__intro">
+      To speak to one of our friendly Travel Advisors and to receive our free eBrochures, please complete this short form below.
+     </p>
+     <div class="enquiry-form__grid">
+      <enquiry-field data-enquiry-field="first-name">
+      </enquiry-field>
+      <enquiry-field data-enquiry-field="last-name">
+      </enquiry-field>
+      <enquiry-field data-enquiry-field="email">
+      </enquiry-field>
+      <enquiry-field data-enquiry-field="phone">
+      </enquiry-field>
+      <enquiry-field data-enquiry-field="postcode">
+      </enquiry-field>
+      <enquiry-field data-enquiry-field="destination">
+      </enquiry-field>
+      <enquiry-field data-enquiry-field="notes">
+      </enquiry-field>
+     </div>
+     <label class="enquiry-form__consent">
+      <input type="checkbox"/>
+      <span>
+       <strong>
+        IMPORTANT:
+       </strong>
+       Want to get more information about Limitless holidays? Because of new regulations, we can only contact you if you consent to it. So, can we contact you about our holidays? If yes, please tick the box.
+      </span>
+     </label>
+     <button class="button" type="button">
+      Send Enquiry
+     </button>
+     <small>
+      This is a static assessment form. No information is submitted.
+     </small>
+    </div>
+   </section>
+   <section class="press-section">
+    <div class="page-width">
+     <h2>
+      Limitless Travel Featured in the News
+     </h2>
+     <div class="press-section__logos">
+      <img alt="The Times" loading="lazy" src="https://limitless.imgix.net/ed4def75-6880-4108-911e-ad356101c209/The-Times-Logo.png?auto=compress%2Cformat&amp;dpr=2&amp;fit=crop&amp;fm=png&amp;h=60&amp;rect=0%2C0%2C3840%2C600&amp;w=384"/>
+      <img alt="The Independent" loading="lazy" src="https://limitless.imgix.net/83c660b4-ad21-4a57-a06d-109dd8614dfc/Independent_logo_logotype.png?auto=compress%2Cformat&amp;dpr=2&amp;fit=crop&amp;fm=png&amp;h=66&amp;rect=0%2C0%2C2497%2C430&amp;w=384"/>
+      <img alt="The Guardian" loading="lazy" src="https://limitless.imgix.net/83c660b4-ad21-4a57-a06d-109dd8614dfc/5847f47bcef1014c0b5e4894.png?auto=compress%2Cformat&amp;dpr=2&amp;fit=crop&amp;fm=png&amp;h=61&amp;rect=0%2C0%2C3241%2C512&amp;w=384"/>
+     </div>
+    </div>
+   </section>
+  </main>
+  <footer class="site-footer">
+   <a aria-label="Scroll to top" class="site-footer__top">
+    ↑
+   </a>
+   <div class="site-footer__partners page-width">
+    <img alt="Excellent reviews on Google and other review websites" class="site-footer__google" src="https://www.limitlesstravel.org/assets/site/images/google/google-reviews.webp"/>
+    <img alt="Accessible Holidays Provider of the Year" class="site-footer__award" src="https://www.limitlesstravel.org/assets/site/images/ttg/accessible-2023.webp"/>
+    <div class="site-footer__socials">
+     <a aria-label="Limitless Travel on Facebook">
+      f
+     </a>
+     <a aria-label="Call Limitless Travel">
+      ☎
+     </a>
+    </div>
+   </div>
+   <div class="site-footer__columns page-width">
+    <footer-link-group data-group="holiday-types">
+    </footer-link-group>
+    <footer-link-group data-group="destinations">
+    </footer-link-group>
+    <footer-link-group data-group="limitless-travel">
+    </footer-link-group>
+    <address>
+     <h2>
+      Contact
+     </h2>
+     <a>
+      Contact Form
+     </a>
+     <p>
+      Limitless Travel Ltd
+      <br/>
+      Scott House
+      <br/>
+      Custard Factory
+      <br/>
+      Gibb St
+      <br/>
+      Birmingham
+      <br/>
+      B9 4AA
+     </p>
+     <p>
+      Company Registration No. 09735991
+     </p>
+     <a>
+      0800 711 7112
+     </a>
+     <a>
+      contact@limitlesstravel.org
+     </a>
+     <img alt="ABTA Member Y6777" src="https://www.limitlesstravel.org/assets/site/images/abta/abta-with-number.webp"/>
+    </address>
+   </div>
+  </footer>
+  <template id="holiday-row-template">
+   <section>
+    <div class="inner">
+     <header class="heading">
+      <h2 data-field="title">
+      </h2>
+      <a data-field="action" slot="action">
+      </a>
+     </header>
+     <div class="viewport">
+      <div class="track" data-list="cards">
+      </div>
+     </div>
+    </div>
+   </section>
+  </template>
+  <template id="holiday-card-template">
+   <article class="card">
+    <div class="media">
+     <img data-field="image" slot="image"/>
+     <div class="tags" data-list="tags">
+     </div>
+    </div>
+    <div class="content">
+     <div class="top">
+      <h3 data-field="title">
+      </h3>
+      <p data-field="eyebrow" hidden="" slot="eyebrow">
+      </p>
+      <p data-field="description">
+      </p>
+     </div>
+     <div class="bottom">
+      <div class="departures">
+       <h4>
+        Departures
+       </h4>
+       <div class="dates" data-list="departures">
+       </div>
+      </div>
+      <footer class="footer">
+       <span>
+        <strong data-field="price">
+        </strong>
+        <del data-field="old-price" hidden="" slot="old-price">
+        </del>
+       </span>
+       <b data-field="days">
+       </b>
+      </footer>
+     </div>
+    </div>
+   </article>
+  </template>
+  <template id="holiday-tag-template">
+   <span data-field="tag" slot="tag">
+   </span>
+  </template>
+  <template id="holiday-departure-template">
+   <span data-field="departure" slot="departure">
+   </span>
+  </template>
+  <template id="category-section-template">
+   <section>
+    <div class="inner">
+     <header class="heading">
+      <h2 data-field="title">
+      </h2>
+      <a data-field="action" hidden="" slot="action">
+      </a>
+     </header>
+     <div class="grid" data-list="cards">
+     </div>
+    </div>
+   </section>
+  </template>
+  <template id="category-card-template">
+   <a class="card">
+    <div class="content">
+     <h3 data-field="title">
+     </h3>
+     <p data-field="description">
+     </p>
+    </div>
+   </a>
+  </template>
+  <template id="trust-item-template">
+   <article>
+    <img data-field="image" slot="image"/>
+    <div>
+     <h3 data-field="title">
+     </h3>
+     <p data-field="description">
+     </p>
+    </div>
+   </article>
+  </template>
+  <template id="search-field-template">
+   <label>
+    <span data-field="label">
+    </span>
+    <select data-field="control">
+    </select>
+   </label>
+  </template>
+  <template id="enquiry-field-template">
+   <label>
+    <span class="label" data-field="label">
+    </span>
+    <span class="control" data-list="control">
+    </span>
+   </label>
+  </template>
+  <template id="form-input-template">
+   <input data-field="control"/>
+  </template>
+  <template id="form-select-template">
+   <select data-field="control">
+   </select>
+  </template>
+  <template id="form-textarea-template">
+   <textarea data-field="control"></textarea>
+  </template>
+  <template id="form-option-template">
+   <option data-field="option">
+   </option>
+  </template>
+  <template id="split-section-template">
+   <section>
+    <div class="inner">
+     <img class="image" data-field="image" slot="image"/>
+     <div class="content">
+      <h2 data-field="title">
+      </h2>
+      <p data-field="description">
+      </p>
+      <a data-field="action">
+      </a>
+     </div>
+    </div>
+   </section>
+  </template>
+  <template id="footer-link-group-template">
+   <nav data-field="navigation">
+    <h2 data-field="title">
+    </h2>
+    <ul data-list="links">
+    </ul>
+   </nav>
+  </template>
+  <template id="footer-link-template">
+   <li>
+    <a data-field="link">
+    </a>
+   </li>
+  </template>
+ </body>
+</html>

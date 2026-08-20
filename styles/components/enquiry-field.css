@@ -1,0 +1,51 @@
+enquiry-field {
+  display: block;
+}
+
+enquiry-field[wide] {
+  grid-column: 1 / -1;
+}
+
+enquiry-field label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+enquiry-field[required] .label::after {
+  color: #c71717;
+  content: " *";
+}
+
+enquiry-field input,
+enquiry-field select,
+enquiry-field textarea {
+  width: 100%;
+  min-height: 46px;
+  padding: 11px 12px;
+  border: 1px solid #a6afbd;
+  border-radius: 0;
+  background: #fff;
+  color: var(--navy);
+  font: inherit;
+  font-size: 15px;
+}
+
+enquiry-field textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+@media (max-width: 600px) {
+  enquiry-field[wide] {
+    grid-column: auto;
+  }
+
+  enquiry-field input,
+  enquiry-field select,
+  enquiry-field textarea {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,21 @@
+footer-link-group {
+  display: block;
+}
+
+footer-link-group h2 {
+  margin: 0 0 18px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+footer-link-group ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+footer-link-group li {
+  margin-bottom: 7px;
+  list-style: none;
+}

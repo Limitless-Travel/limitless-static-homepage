@@ -1,0 +1,142 @@
+@font-face {
+  font-family: Circular;
+  src: url('../fonts/CircularXXWeb-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Circular;
+  src: url('../fonts/CircularXXWeb-Medium.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Circular;
+  src: url('../fonts/CircularXXWeb-Medium.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Circular;
+  src: url('../fonts/CircularXXWeb-Bold.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  color: #061954;
+  background: #fff;
+  font-family: Circular, Arial, Helvetica, sans-serif;
+  font-size: 18.66px;
+  font-synthesis: none;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  --navy: #061954;
+  --blue: #0054bc;
+  --yellow: #ffbb00;
+  --off-white: #f7f7fe;
+  --page: min(90%, 1152px);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  color: var(--navy);
+  background: #fff;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: Circular, Arial, Helvetica, sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 38.4px;
+  line-height: 45px;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  outline-offset: 3px;
+}
+
+button {
+  color: inherit;
+}
+
+.page-width {
+  width: var(--page);
+  margin-inline: auto;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 56px;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 37px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--yellow);
+  color: var(--navy);
+  font-size: 18.66px;
+  font-weight: 500;
+  line-height: 1.25;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #ffd24f;
+}
+
+.button--small {
+  min-height: 45px;
+  padding: 8px 32px;
+}

@@ -1,0 +1,182 @@
+holiday-card {
+  width: 295px;
+  min-height: 626px;
+  display: flex;
+  flex: 0 0 295px;
+  scroll-snap-align: center;
+}
+
+holiday-card .card {
+  position: relative;
+  width: 100%;
+  min-height: 626px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #fff;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 2px 10px rgba(31, 31, 186, .25);
+}
+
+holiday-card .media {
+  position: relative;
+  height: 197px;
+  flex: 0 0 197px;
+  overflow: hidden;
+  background: var(--navy);
+}
+
+holiday-card [slot="image"] {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+holiday-card .tags {
+  position: absolute;
+  inset: 0 auto auto 0;
+  display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 8px 17px;
+}
+
+holiday-card [slot="tag"] {
+  display: block;
+  padding: 0 8px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+holiday-card .tag--red {
+  background: #c71717;
+  color: #fff;
+}
+
+holiday-card .tag--blue {
+  background: #0054bc;
+  color: #fff;
+}
+
+holiday-card .tag--navy {
+  background: #061954;
+  color: #fff;
+}
+
+holiday-card .tag--green {
+  background: #0f4502;
+  color: #fff;
+}
+
+holiday-card .tag--pale {
+  background: #e8f4fc;
+  color: #061954;
+}
+
+holiday-card .content {
+  min-height: 429px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 17px;
+}
+
+holiday-card .top {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+holiday-card h3,
+holiday-card p,
+holiday-card h4 {
+  margin: 0;
+}
+
+holiday-card h3 {
+  color: #0750a0;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 29px;
+}
+
+holiday-card p {
+  font-size: 16px;
+  line-height: 23px;
+}
+
+holiday-card [slot="eyebrow"] {
+  margin-top: -7px;
+  color: #606a76;
+}
+
+holiday-card .bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+holiday-card .departures {
+  padding-top: 13px;
+  border-top: 1px solid #e5e8ee;
+}
+
+holiday-card h4 {
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+holiday-card .dates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+holiday-card [slot="departure"] {
+  padding: 3px 7px;
+  border: 1px solid #7c91a9;
+  border-radius: 999px;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+holiday-card .footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 13px;
+  border-top: 1px solid #e5e8ee;
+}
+
+holiday-card strong {
+  color: #d83f1a;
+  font-size: 21px;
+  font-weight: 500;
+}
+
+holiday-card [slot="old-price"] {
+  margin-left: 10px;
+  color: #69717f;
+  font-size: 13px;
+  text-decoration: line-through;
+}
+
+holiday-card b {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  holiday-card h3 {
+    font-size: 24px;
+  }
+}
